@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>帅飞飞时尚男装</title>
+	<link rel="stylesheet" type="text/css" href="css\mystyle.css">
+	<script type="text/javascript">
+       	function inc()
+	    {	
+			var i=document.form1.many.value;
+		 	i++;
+   			document.form1.many.value=i;
+		}	
+        function dec()
+		{	
+	 		var j=document.form1.many.value;
+  	 		j--;
+  	 		if(j<=0)j=0;
+   			document.form1.many.value=j;
+		}
+	</script>
+</head>
+<body>
+	<div>
+	<div align="right">
+		<form action="search">
+			<img style="height:60px;width: 200px" src="images/sff.jpg" align="left">
+			<input type="text" class="height" name="cName">
+			<input type="submit" value="搜宝贝">
+			<a href="shop_car.html">购物车</a>
+		</form>
+	</div>
+
+	<div style="background-color: #d0e4fe">
+		<h1>帅飞飞时尚男装</h1><hr>
+	</div>
+	<div>
+		<div style="background-color: #d0e4fe">
+		<a href="SFF.html" style="text-decoration: none">首页</a>
+		<div class="dropdown">
+		<button class="dropbtn">所有分类</button>
+			<div class="dropdown-content">
+				<a href="fleece.html">卫衣</a>
+				<a href="pants.html">休闲裤</a>
+				<a href="jacket.html">夹克</a>
+				<a href="T_shirt.html">T恤</a>
+				<a href="majia.html">马甲</a>
+			</div>	
+		</div>
+	    </div>
+
+		<div id="container">
+		<fieldset>
+		<form name="form1">
+			<div id="menu">
+			<img src="https://gd1.alicdn.com/imgextra/i3/2667388688/TB2pvZUf2BNTKJjSszcXXbO2VXa_!!2667388688.jpg" align="left" class="height">
+		    </div>
+		    <div id="content" style="float: left">
+		    <p>男士时尚休闲裤 青少年潮流黑色直筒长裤</p>
+			<p>价格&nbsp&nbsp¥180.00</p>
+			<p>配送
+				<select>
+					<option>安徽</option>
+					<option>福建</option>
+					<option>山西</option>
+				</select>
+			</p>
+			<p>尺码
+				<input type="radio" name="size" value="S">S
+				<input type="radio" name="size" value="M">M
+				<input type="radio" name="size" value="L">L					
+			</p>
+			<p>颜色
+			<input type="radio" name="color" value="red">白色
+			<input type="radio" name="color" value="black">黑色
+			<input type="radio" name="color" value="blue">蓝色
+			</p>
+			<p>数量
+			<button type="button" onclick="dec()">-</button>
+			<input type="text" value="0" name="many" height="10px">
+			<button type="button" onclick="inc()">+</button>
+			</p>
+			<button style="height:60px;width: 200px;background-color: blue" autofocus onclick="alert('请支付')">立即购买</button>
+			<button style="height:60px;width: 200px;background-color: orange" autofocus onclick="alert('成功加入购物车')">加入购物车</button>
+		    </div>
+		</form>				
+		</fieldset>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
