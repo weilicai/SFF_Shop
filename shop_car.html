@@ -4,15 +4,92 @@
 	<meta charset="utf-8">
 	<title>帅飞飞时尚男装</title>
 	<link rel="stylesheet" type="text/css" href="css\mystyle.css">
+	<script type="text/javascript">
+       	function inc1()
+	    {	
+			var i=document.form1.input1.value;
+		 	i++;
+   			document.form1.input1.value=i;
+   			document.form1.input2.value=i*299;
+   			document.form4.input1.value=Number(document.form4.input1.value)+Number(299);
+		}	
+        function dec1()
+		{	
+	 		var j=document.form1.input1.value;
+  	 		j--;
+  	 		if(j<=0)j=0;
+   			document.form1.input1.value=j;
+   			document.form1.input2.value=j*299;
+   			document.form4.input1.value=Number(document.form4.input1.value)-Number(299);
+   			if(document.form4.input1.value<=0)document.form4.input1.value=0;
+		}
+		function clearn1()
+		{	
+			document.form4.input1.value=Number(document.form4.input1.value)-Number(document.form1.input2.value);
+			if(document.form4.input1.value<=0)document.form4.input1.value=0;
+			document.form1.input1.value=0;
+   			document.form1.input2.value=0;
+		}
+       	function inc2()
+	    {	
+			var i=document.form2.input1.value;
+		 	i++;
+   			document.form2.input1.value=i;
+   			document.form2.input2.value=i*198;
+   			document.form4.input1.value=Number(document.form4.input1.value)+Number(198);
+		}	
+        function dec2()
+		{	
+	 		var j=document.form2.input1.value;
+  	 		j--;
+  	 		if(j<=0)j=0;
+   			document.form2.input1.value=j;
+   			document.form2.input2.value=j*198;
+   			document.form4.input1.value=Number(document.form4.input1.value)-Number(198);
+   			if(document.form4.input1.value<=0)document.form4.input1.value=0;
+		}
+		function clearn2()
+		{
+			document.form4.input1.value=Number(document.form4.input1.value)-Number(document.form2.input2.value);
+			if(document.form4.input1.value<=0)document.form4.input1.value=0;
+			document.form2.input1.value=0;
+   			document.form2.input2.value=0;
+		}
+       	function inc3()
+	    {	
+			var i=document.form3.input1.value;
+		 	i++;
+   			document.form3.input1.value=i;
+   			document.form3.input2.value=i*99;
+   			document.form4.input1.value=Number(document.form4.input1.value)+Number(99);
+		}	
+        function dec3()
+		{	
+	 		var j=document.form3.input1.value;
+  	 		j--;
+  	 		if(j<=0)j=0;
+   			document.form3.input1.value=j;
+   			document.form3.input2.value=j*99;
+   			document.form4.input1.value=Number(document.form4.input1.value)-Number(99);
+   			if(document.form4.input1.value<=0)document.form4.input1.value=0;
+		}
+		function clearn3()
+		{
+			document.form4.input1.value=Number(document.form4.input1.value)-Number(document.form3.input2.value);
+			if(document.form4.input1.value<=0)document.form4.input1.value=0;
+			document.form3.input1.value=0;
+   			document.form3.input2.value=0;
+		}
+	</script>
 </head>
 <body>
 	<div>
 	<div align="right">
-		<form action="search">
-			<img style="height:60px;width: 200px" src="images/sff.jpg" align="left">
-			<input type="text" class="height" name="cName">
-			<input type="submit" value="搜宝贝">
-			<a href="shop_car.html">购物车</a>
+		<form>
+			<img style="height:60px;width: 200px" src="images\sff.jpg" align="left">
+			<input type="text" class="height">
+			<input type="submit" value="搜淘宝">
+			<a href="SFF.html">首页</a>
 		</form>
 	</div>
 
@@ -22,29 +99,54 @@
 	<div>
 		<table border="1">
 		<tr style="color: blue;background-color: #d0e4fe">
-			<td>商品名称</td>
-			<td>商品数量</td>
+			<td>商品</td>
 			<td>商品单价</td>
+			<td>商品数量</td>
+			<td>总价</td>
 			<td>增加</td>
 			<td>减少</td>
 			<td>清零</td>
-		</tr>	
+		</tr>
+		<form name="form1">
 		<tr style="color: blue;background-color: #d0e4fe">
 			<td><img style="width: 100px;height: 100px" src="https://gd2.alicdn.com/imgextra/i1/2667388688/TB2gqznaLjM8KJjSZFyXXXdzVXa_!!2667388688.jpg"></td>
-			<td>1</td>
-			<td>200</td>
-			<td>+</td>
-			<td>-</td>
-			<td>clear</td>
-		</tr>	
-		<tr style="color: blue;background-color: #d0e4fe">
-			<td><img style="width: 100px;height: 100px" src="https://gd3.alicdn.com/imgextra/i1/2667388688/TB2qrFHa6uhSKJjSspmXXcQDpXa_!!2667388688.jpg"></td>
-			<td>1</td>
-			<td>200</td>
-			<td>+</td>
-			<td>-</td>
-			<td>clear</td>
+			<td>299</td>
+			<td><input type="text" style="width: 100px;height: 100px;background-color:#d0e4fe;" value="0" name="input1"></td>
+			<td><input type="text" style="width: 100px;height: 100px;background-color:#d0e4fe;" value="0" name="input2"></td>
+			<td><button type="button" style="background-color:#d0e4fe;" onclick="inc1()">+</button></td>
+			<td><button type="button" style="background-color:#d0e4fe;" onclick="dec1()">-</button></td>
+			<td><button type="button" style="background-color:#d0e4fe;" onclick="clearn1()">clear</button></td>
 		</tr>
+		</form>	
+		<form name="form2">
+		<tr style="color: blue;background-color: #d0e4fe">
+			<td><img style="width: 100px;height: 100px" src="https://gd1.alicdn.com/imgextra/i3/2667388688/TB2pvZUf2BNTKJjSszcXXbO2VXa_!!2667388688.jpg"></td>
+			<td>198</td>
+			<td><input type="text" style="width: 100px;height: 100px;background-color:#d0e4fe;" value="0" name="input1"></td>
+			<td><input type="text" style="width: 100px;height: 100px;background-color:#d0e4fe;" value="0" name="input2"></td>
+			<td><button type="button" style="background-color:#d0e4fe;" onclick="inc2()">+</button></td>
+			<td><button type="button" style="background-color:#d0e4fe;" onclick="dec2()">-</button></td>
+			<td><button type="button" style="background-color:#d0e4fe;" onclick="clearn2()">clear</button></td>
+		</tr>
+		</form>
+		<form name="form3">
+		<tr style="color: blue;background-color: #d0e4fe">
+			<td><img style="width: 100px;height: 100px" src="https://gd4.alicdn.com/imgextra/i1/2667388688/TB2.Xvahi0TMKJjSZFNXXa_1FXa_!!2667388688.jpg"></td>
+			<td>99</td>
+			<td><input type="text" style="width: 100px;height: 100px;background-color:#d0e4fe;" value="0" name="input1"></td>
+			<td><input type="text" style="width: 100px;height: 100px;background-color:#d0e4fe;" value="0" name="input2"></td>
+			<td><button type="button" style="background-color:#d0e4fe;" onclick="inc3()">+</button></td>
+			<td><button type="button" style="background-color:#d0e4fe;" onclick="dec3()">-</button></td>
+			<td><button type="button" style="background-color:#d0e4fe;" onclick="clearn3()">clear</button></td>
+		</tr>
+		</form>
+		<form name="form4">
+		<tr style="color: blue;background-color: #d0e4fe">
+			<td>合计（￥）</td>
+			<td><input type="text" style="width: 100px" name="input1" value="0"></td>
+		</tr>	
+		</form>
+		
 		</table>
 	</div>	
 	</div>
